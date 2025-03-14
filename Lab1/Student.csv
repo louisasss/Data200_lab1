@@ -1,5 +1,7 @@
-﻿email_address,first_name,last_name,course_id,grade,mark
-billie@sjsu.edu,Billie,Holiday,DATA200,B,88
-stevie@sjsu.edu,Stevie,Wonder,DATA200,A,94
-louis@sjsu.edu,Louis,Armstrong,DATA201,C,76
-sam@sjsu.edu,Sam,Cooke,ENGL101,A,92
+﻿email_address,first_name,last_name
+billie@sjsu.edu,Billie,Holiday
+stevie@sjsu.edu,Stevie,Wonder
+louis@sjsu.edu,Louis,Armstrong
+sam@sjsu.edu,Sam,Cooke
+diana@sjsu.edu,Diana,Ross
+ray@sjsu.edu,Raymond,Charles
