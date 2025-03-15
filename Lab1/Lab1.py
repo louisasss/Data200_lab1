@@ -1,10 +1,10 @@
 import csv
 import shutil
-
+from encdyc import TextSecurity
 
 class LoginUser():
-    def __init__(self, email_address, password):
-        self.email_address = email_address
+    def __init__(self, user_id, password):
+        self.user_id = user_id
         self.password = password
         self.file_path = '/Users/louisas/Documents/GitHub/Data200_lab1/Lab1/Login.csv'
 
@@ -12,7 +12,7 @@ class LoginUser():
         with open(self.file_path, mode='r', newline='', encoding='utf-8') as file:
             reader = csv.reader(file)
             for row in reader:
-                if self.email_address in row[0]:
+                if self.user_id in row[0]:
                     if self.password == row[1]:
                         return True,row[0],row[1],row[2]
                     else:
@@ -20,6 +20,9 @@ class LoginUser():
 
     def logout(self):
         return "Logging Out"
+    
+    def register_new_user(self, user_id, password, role):
+        pass
 
     def change_password(self):
         login = self.login()
@@ -547,7 +550,7 @@ def checkmygrade_main_menu():
                         print("================================".center(columns))
                         print("\n CheckMyGrade Student Main Menu:")
                         print("1. Update personal details")
-                        print("2. Update login details")
+                        print("2. Update password")
                         print("3. View grades")
                         print("4. View course details")
                         print("5. View professor details")
@@ -615,7 +618,7 @@ def checkmygrade_main_menu():
                         print("================================".center(columns))
                         print("\n CheckMyGrade Professor Main Menu:")
                         print("1. Update personal details")
-                        print("2. Update login details")
+                        print("2. Update password")
                         print("3. Add/delete/modify student")
                         print("4. Add/delete/modify grade")
                         print("5. View courses")
@@ -703,9 +706,9 @@ def checkmygrade_main_menu():
                         print("Welcome to CheckMyGrade".center(columns))
                         print("================================".center(columns))
                         print("\n CheckMyGrade Admin Main Menu:")
-                        print("1. View professor records")
-                        print("2. View course records")
-                        print("3. View student records")
+                        print("1. View all professor records")
+                        print("2. View all course records")
+                        print("3. View all student records")
                         print("4. Add/delete/modify professor")
                         print("5. Add/delete/modify course")
                         print("6. Add/delete/modify student")
